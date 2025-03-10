@@ -10,7 +10,7 @@ jobs:
     steps:
       -
         name: Test action
-        uses: action-pack/set-secret@v1
+        uses: ./
         with:
           name: 'TEST'
           value: 'TEST'
