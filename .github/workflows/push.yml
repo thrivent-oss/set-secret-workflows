@@ -48,3 +48,9 @@ jobs:
           name: 'TEST'
           value: 'TEST'
           token: ${{ secrets.REPO_ACCESS_TOKEN }}
+
+      - name: Test encrypted secret
+        run: |
+          echo ${{ secrets.TEST }}
+          echo 'TEST'
+
