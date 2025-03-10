@@ -92,11 +92,11 @@ const bootstrap = async () => {
     const response = await setSecret(data);
 
     if (response.status === 201) {
-      return "Succesfully created secret " + name + ".";
+      return "Successfully created secret " + name + ".";
     }
 
     if (response.status === 204) {
-      return "Succesfully updated secret " + name + " to new value.";
+      return "Successfully updated secret " + name + " to new value.";
     }
 
     throw new Error("ERROR: Wrong status was returned: " + response.status);
