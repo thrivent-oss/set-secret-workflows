@@ -8,8 +8,10 @@ jobs:
     name: Test
     runs-on: ubuntu-latest
     steps:
-      -
-        name: Test action
+      - name: Checkout latest action code
+        uses: actions/checkout@v4
+
+      - name: Test action
         uses: ./
         with:
           name: 'TEST'
