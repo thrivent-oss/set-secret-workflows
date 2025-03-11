@@ -46,11 +46,12 @@ jobs:
         uses: ./
         with:
           name: 'TEST'
-          value: 'TEST'
+          value: 'abcd123'
           token: ${{ secrets.REPO_ACCESS_TOKEN }}
 
       - name: Test encrypted secret
         run: |
           echo ${{ secrets.TEST }}
-          echo 'TEST'
+          echo 'abcd123'
+          echo 'There should be two lines of asterisks above this if the secret was added successfully.'
 
